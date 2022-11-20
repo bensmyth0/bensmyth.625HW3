@@ -8,5 +8,6 @@ This package seeks to reimplement the command for linear models in base R (lm) a
 Using the package `devtools`, the package may be installed directly from github in the following manner:
 
 ```{r}
-TEST
+install.packages("devtools")
+devtools::install_github(bensmyth0/bensmyth.625HW3)
 ```
