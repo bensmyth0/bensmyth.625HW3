@@ -47,4 +47,15 @@ model2$F.Test
 #> Education    1   6.875299  6.875299 0.9974749 0.323509615
 #> Residuals   43 296.386276  6.892704        NA          NA
 
+# In the absence of a dataset, it will instead interpret the y and x inputs as the data itself
+
+model3 <- linear(y = testY, x = testX)
+model3$beta
+#>      Intercept        x1
+#> [1,] 0.1206454 0.9534287
+model3$F.Test
+#>           DF     Sum Sq    Mean Sq  F Value      p-value
+#> x1         1 9.91565823 9.91565823 352.6957 0.0003295758
+#> Residuals  3 0.08434177 0.02811392       NA           NA
+
 ```
