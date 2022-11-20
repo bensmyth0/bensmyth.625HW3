@@ -30,5 +30,21 @@ model1 <- linear(y = "Infant.Mortality", x = "Fertility", data = swiss)
 model1$beta
 #>      Intercept  Fertility
 #> [1,]   13.1297 0.09712863
+model1$F.Test
+#>           DF    Sum Sq   Mean Sq  F Value     p-value
+#> Fertility  1  67.71661 67.716611 9.447708 0.003585238
+#> Residuals 45 322.53828  7.167517       NA          NA
+
+# We can also run a multiple regression model with additional predictors Agriculture and Education
+model2 <- linear(y = "Infant.Mortality", x = c("Fertility", "Agriculture", "Education"), data = swiss)
+model2$beta
+#>      Intercept Fertility Agriculture Education
+#> [1,]  10.14163 0.1420803 -0.01754503 0.0659342
+model2$F.Test
+#>             DF     Sum Sq   Mean Sq   F Value     p-value
+#> Fertility    1  67.716611 67.716611 9.8243896 0.003099901
+#> Agriculture  1  19.276707 19.276707 2.7966829 0.101721627
+#> Education    1   6.875299  6.875299 0.9974749 0.323509615
+#> Residuals   43 296.386276  6.892704        NA          NA
 
 ```
