@@ -5,4 +5,8 @@ This package seeks to reimplement the command for linear models in base R (lm) a
 * linear() runs a linear regression model given the specified response variable and predictor variables.
 
 # Installation
-`TEST`
+Using the package `devtools`, the package may be installed directly from github in the following manner:
+
+```{r}
+TEST
+```
